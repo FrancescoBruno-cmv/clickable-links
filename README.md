@@ -42,7 +42,7 @@ use FrancescoBrunoCmv\ClickableLinks\Linkifier;
 
 $text = "Visita https://example.com o scrivici a info@example.com";
 
-echo Linkifier::linkify($text);
+echo Linkifier::process($text);
 // Visita <a href="https://example.com" target="_blank">https://example.com</a>
 // o scrivici a <a href="mailto:info@example.com" target="_blank">info@example.com</a>
 ```
@@ -68,23 +68,23 @@ echo Linkifier::linkify($text);
 
 ```php
 // URL HTTPS
-Linkifier::linkify("Visita https://example.com");
+Linkifier::process("Visita https://example.com");
 // → Visita <a href="https://example.com" target="_blank">https://example.com</a>
 
 // WWW senza protocollo
-Linkifier::linkify("Vai su www.example.com");
+Linkifier::process("Vai su www.example.com");
 // → Vai su <a href="http://www.example.com" target="_blank">www.example.com</a>
 
 // Email
-Linkifier::linkify("Scrivi a hello@example.com");
+Linkifier::process("Scrivi a hello@example.com");
 // → Scrivi a <a href="mailto:hello@example.com" target="_blank">hello@example.com</a>
 
 // Skype
-Linkifier::linkify("Chiamami su skype:myusername");
+Linkifier::process("Chiamami su skype:myusername");
 // → Chiamami su <a href="skype:myusername" target="_blank">skype:myusername</a>
 
 // Contenuto misto
-Linkifier::linkify("Sito: www.example.com | Email: info@example.com | FTP: ftp.example.com");
+Linkifier::process("Sito: www.example.com | Email: info@example.com | FTP: ftp.example.com");
 // → Tutti e tre convertiti in anchor tag cliccabili
 ```
 
