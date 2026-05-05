@@ -1,0 +1,38 @@
+{
+    "name": "francescobruno-cmv/clickable-links",
+    "description": "Converte URL e indirizzi email in tag anchor HTML cliccabili.",
+    "type": "library",
+    "keywords": [
+        "php",
+        "laravel",
+        "clickable",
+        "links",
+        "url",
+        "email",
+        "anchor",
+        "html"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Francesco Bruno",
+            "email": "f.bruno@cmvgroup.it"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "FrancescoBrunoCmv\\ClickableLinks\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FrancescoBrunoCmv\\ClickableLinks\\Tests\\": "tests/"
+        }
+    }
+}
